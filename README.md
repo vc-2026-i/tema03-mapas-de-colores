@@ -2,8 +2,6 @@
 *Prof. Jose Francisco Ruiz Muñoz*<br>
 *Visión por Computador 2026-I*<br>
 *Universidad Nacional de Colombia - Sede de La Paz*<br>
----
-
 
 ## 1. Introducción
 
