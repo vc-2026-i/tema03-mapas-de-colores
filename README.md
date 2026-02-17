@@ -9,9 +9,9 @@ En visión por computador, el color no es únicamente un atributo visual, sino u
 
 Formalmente:
 
-[
+$$
 f: \mathbb{R} \rightarrow \mathbb{R}^3
-]
+$$
 
 Es decir, un valor escalar puede mapearse a un vector de tres componentes que representan un color.
 
@@ -31,9 +31,9 @@ En procesamiento de imágenes, los mapas de color permiten:
 
 Una imagen en escala de grises puede modelarse como una función:
 
-[
+$$
 I(x,y) \in [0,255]
-]
+$$
 
 donde:
 
@@ -41,11 +41,11 @@ donde:
 * 255 representa blanco
 * Los valores intermedios representan niveles de intensidad
 
-Desde el punto de vista matricial, una imagen de tamaño ( M \times N ) es:
+Desde el punto de vista matricial, una imagen de tamaño $M \times N$ es:
 
-[
+$$
 I \in \mathbb{R}^{M \times N}
-]
+$$
 
 Cada píxel es un escalar que representa intensidad luminosa.
 
@@ -55,9 +55,9 @@ Cada píxel es un escalar que representa intensidad luminosa.
 
 Una imagen en escala de grises puede entenderse como un **tensor de dos dimensiones espaciales**:
 
-[
+$$
 I \in \mathbb{R}^{M \times N}
-]
+$$
 
 No existe dimensión adicional asociada al color.
 
@@ -67,9 +67,9 @@ No existe dimensión adicional asociada al color.
 
 Una imagen RGB puede convertirse a escala de grises mediante una combinación lineal ponderada de los canales:
 
-[
+$$
 I = 0.299R + 0.587G + 0.114B
-]
+$$
 
 Estos coeficientes reflejan la sensibilidad del sistema visual humano.
 
@@ -100,9 +100,9 @@ El modelo RGB es un modelo aditivo basado en tres canales:
 
 Un píxel se representa como:
 
-[
+$$
 I(x,y) = (R,G,B)
-]
+$$
 
 Cada componente pertenece al intervalo ([0,255]) en imágenes de 8 bits.
 
@@ -112,9 +112,9 @@ Cada componente pertenece al intervalo ([0,255]) en imágenes de 8 bits.
 
 Una imagen RGB puede representarse como:
 
-[
+$$
 I \in \mathbb{R}^{M \times N \times 3}
-]
+$$
 
 Es decir:
 
@@ -125,7 +125,7 @@ Es decir:
 
 ### 3.3 Interpretación geométrica
 
-El espacio RGB puede interpretarse como un cubo en (\mathbb{R}^3):
+El espacio RGB puede interpretarse como un cubo en $\mathbb{R}^3$:
 
 * (0,0,0) → negro
 * (255,255,255) → blanco
@@ -139,9 +139,9 @@ Cada color es un punto dentro de ese cubo.
 
 Frecuentemente se trabaja con cada canal por separado:
 
-[
+$$
 I_R, \quad I_G, \quad I_B
-]
+$$
 
 Esto permite realizar análisis específicos sobre cada componente.
 
@@ -151,7 +151,7 @@ Esto permite realizar análisis específicos sobre cada componente.
 
 | Característica           | Escala de grises                                                       | RGB                                                                                                                                              |
 | ------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Representación tensorial | Tensor de dos dimensiones espaciales ( I \in \mathbb{R}^{M \times N} ) | Tensor de dos dimensiones espaciales y una dimensión adicional correspondiente a los canales de color ( I \in \mathbb{R}^{M \times N \times 3} ) |
+| Representación tensorial | Tensor de dos dimensiones espaciales $I \in \mathbb{R}^{M \times N} $ | Tensor de dos dimensiones espaciales y una dimensión adicional correspondiente a los canales de color $ I \in \mathbb{R}^{M \times N \times 3} $|
 | Información              | Intensidad luminosa                                                    | Intensidad luminosa y composición cromática                                                                                                      |
 | Costo computacional      | Menor                                                                  | Mayor                                                                                                                                            |
 | Uso típico               | Procesamiento clásico de imágenes                                      | Visión por computador moderna y aprendizaje profundo                                                                                             |
@@ -245,7 +245,7 @@ Interpretación:
 
 Esto es fundamental cuando:
 
-* Se visualizan imágenes normalizadas en ([0,1])
+* Se visualizan imágenes normalizadas en $[0,1]$
 * Se comparan varias imágenes con distintos rangos dinámicos
 * Se visualizan gradientes o mapas de activación en redes neuronales
 
@@ -255,9 +255,9 @@ Esto es fundamental cuando:
 
 Si no se especifican `vmin` y `vmax`, Matplotlib usa:
 
-[
+$$
 vmin = \min(I), \quad vmax = \max(I)
-]
+$$
 
 Esto puede producir visualizaciones engañosas cuando se comparan imágenes distintas.
 
